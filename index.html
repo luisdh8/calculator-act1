@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <title>Calculadora</title>
+    </head>
+    <body>
+        <!-- Contenedor principal -->
+        <div class="container-calc">
+            <h1>Calculadora</h1>
+            <div class="screen">
+                <span id="operation"></span>
+            </div>
+            <!-- Filas de botones -->
+            <div class="container-btn">
+                <div class="button" onclick="clearOperation()">AC</div>
+                <div class="button" onclick="addNumber('^')">^</div>
+                <div class="button" onclick="addNumber('/')">÷</div>
+                <div class="button" onclick="addNumber('*')">×</div>
+            </div>
+
+            <div class="container-btn">
+                <div class="button" onclick="addNumber(7)">7</div>
+                <div class="button" onclick="addNumber(8)">8</div>
+                <div class="button" onclick="addNumber(9)">9</div>
+                <div class="button" onclick="addNumber('-')">−</div>
+            </div>
+
+            <div class="container-btn">
+                <div class="button" onclick="addNumber(4)">4</div>
+                <div class="button" onclick="addNumber(5)">5</div>
+                <div class="button" onclick="addNumber(6)">6</div>
+                <div class="button" onclick="addNumber('+')">+</div>
+            </div>
+
+            <div class="container-btn">
+                <div class="button" onclick="addNumber(1)">1</div>
+                <div class="button" onclick="addNumber(2)">2</div>
+                <div class="button" onclick="addNumber(3)">3</div>
+                <div class="button" onclick="addNumber('=')">=</div>
+            </div>
+
+            <div class="container-btn">
+                <div class="button zero-btn" onclick="addNumber(0)">0</div>
+                <div class="button zero-btn" onclick="addNumber('.')">.</div>
+            </div>
+        </div>
+
+        <!-- Historial -->
+        <div class="container-logs">
+            <h1>Historial</h1>
+            <div id="history"></div>
+            <button class="clear-history-btn" onclick="clearHistory()">
+                Limpiar Historial
+            </button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
